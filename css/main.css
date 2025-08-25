@@ -1,0 +1,84 @@
+:root {
+  --primaryBg: #0d99ff;
+  --nutralText: #f9f9f9;
+  --borderRadius: 12px;
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+nav {
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blog {
+  font-weight: bold;
+  background-color: var(--primaryBg);
+  color: var(--nutralText);
+  padding: 7px 15px;
+  border-radius: var(--borderRadius);
+}
+.logo img {
+  width: 32px;
+  height: 32px;
+  /* object-fit: cover; */
+  display: inline-block;
+}
+.logo p {
+  font-weight: bold;
+  display: inline;
+}
+.currency-icon img {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+}
+.currency {
+  background: #c9c4c4;
+  color: #242323;
+  width: 150px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  padding: 6px 10px;
+  border-radius: var(--borderRadius);
+}
+.currency img {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.currency p {
+  font-weight: bold;
+  display: inline;
+  overflow: hidden;
+  text-align: justify;
+}
+.currency-icon p {
+  display: inline;
+  font-weight: bold;
+}
+
+.donation-btn-top {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.btn-active {
+  background-color: var(--primaryBg);
+  color: var(--nutralText);
+  transition: ease 0.3s;
+}
+.donation-btn-top .btn-donation,
+.btn-history {
+  align-content: center;
+}
+
+.btn-food-donate {
+  background-color: var(--primaryBg);
+  color: var(--nutralText);
+}

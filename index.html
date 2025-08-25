@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate For Gaza</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- Daisy UI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <section id="header-section" class="bg-[#F9F7F3]">
+      <header class="container">
+        <nav>
+          <a id="blog" class="blog" href="#">Blog</a>
+          <a class="logo" href="#"
+            ><img src="./assets/logo.png" alt="Logo" />
+            <p>Donate For Gaza</p></a
+          >
+          <span class="currency-icon"
+            ><img src="./assets/TakaCurrency.png" alt="Currency" />
+            <p>5000</p></span
+          >
+        </nav>
+      </header>
+    </section>
+    <!-- Button of Donation and History -->
+    <div class="donation-btn-top container">
+      <button class="btn btn-donation btn-active">Donation</button>
+      <button class="btn btn-history">History</button>
+    </div>
+    <!-- Donation Section -->
+    <section id="donation-section">
+      <div class="donation-container container">
+        <div class="card lg:card-side bg-base-100 shadow-sm">
+          <figure class="w-auto lg:w-1/2">
+            <img src="./assets/donationForFood.webp" alt="Donation For Food" />
+          </figure>
+          <div class="card-body w-auto lg:w-1/2">
+            <span class="currency"
+              ><img class="" src="./assets/TakaCurrency.png" alt="Currency" />
+              <p>5000</p></span
+            >
+            <h2 class="card-title">Donate for Food In Gaza</h2>
+            <p>
+              Civilians in Gaza are suffering in many ways. All of the schools
+              are out of operation, leaving 625,000 children out of education,
+              and 378 of the schools have been damaged. Over 140 health
+              facilities have been damaged and there are shortages of medication
+              and clinical supplies. With limited access to water and food,
+              there are growing cases of disease including over 423,000 cases of
+              infectious diseases such as Diarrhea, Chicken Pox, Meningitis,
+              Hepatitis A, Jaundice, Scabies and Acute Respiratory Infection.
+              Flooding in the ad hoc camps in Khan Younis and Rafah are adding
+              to the health issues.
+            </p>
+            <div class="card-actions flex-col justify-center">
+              <input
+                type="number"
+                class="input validator w-full overflow-hidden"
+                required
+                placeholder="Minimum Donation 100 Taka"
+                min="100"
+                max="100000"
+                title="Must be between be 100 to 100000"
+              />
+              <button
+                class="btn btn-food-donate bg-[#0d99ff] text-[#f9f9f9] w-full"
+              >
+                Donate Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- History Section -->
+    <section class="history-section"></section>
+    <!-- Custom Scripting src -->
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
