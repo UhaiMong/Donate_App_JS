@@ -3,6 +3,7 @@
   --nutralText: #f9f9f9;
   --borderRadius: 12px;
 }
+
 .container {
   width: 85%;
   margin: 0 auto;
@@ -81,4 +82,14 @@ nav {
 .btn-food-donate {
   background-color: var(--primaryBg);
   color: var(--nutralText);
+}
+.donation-section {
+  display: block;
+}
+.history-section {
+  display: none;
+}
+
+.footer {
+  background-color: var(--primaryBg);
 }

@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate For Gaza</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/main.css" />
     <!-- Daisy UI CDN -->
@@ -19,7 +21,7 @@
     <section id="header-section" class="bg-[#F9F7F3]">
       <header class="container">
         <nav>
-          <a id="blog" class="blog" href="#">Blog</a>
+          <a id="blog" class="blog" href="./app/blog.html">Blog</a>
           <a class="logo" href="#"
             ><img src="./assets/logo.png" alt="Logo" />
             <p>Donate For Gaza</p></a
@@ -31,15 +33,21 @@
         </nav>
       </header>
     </section>
+
     <!-- Button of Donation and History -->
     <div class="donation-btn-top container">
-      <button class="btn btn-donation btn-active">Donation</button>
-      <button class="btn btn-history">History</button>
+      <button id="donationTab" class="btn btn-donation btn-active">
+        Donation
+      </button>
+      <button id="historyTab" class="btn btn-history">History</button>
     </div>
     <!-- Donation Section -->
-    <section id="donation-section">
+    <section id="donationSection" class="donation-section">
       <div class="donation-container container">
-        <div class="card lg:card-side bg-base-100 shadow-sm">
+        <!-- Single donation card -->
+        <div
+          class="card lg:card-side bg-base-100 shadow-lg mb-14 p-7 border-1 border-blue-500"
+        >
           <figure class="w-auto lg:w-1/2">
             <img src="./assets/donationForFood.webp" alt="Donation For Food" />
           </figure>
@@ -64,7 +72,87 @@
             <div class="card-actions flex-col justify-center">
               <input
                 type="number"
-                class="input validator w-full overflow-hidden"
+                class="input validator w-full overflow-hidden focus:outline-2 focus:outline-[#0d99ff]"
+                required
+                placeholder="Minimum Donation 100 Taka"
+                min="100"
+                max="100000"
+                title="Must be between be 100 to 100000"
+              />
+              <button
+                class="btn btn-food-donate bg-[#0d99ff] text-[#f9f9f9] w-full"
+              >
+                Donate Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Single Donation Card -->
+        <div
+          class="card lg:card-side bg-base-100 shadow-lg mb-14 p-7 border-1 border-blue-500"
+        >
+          <figure class="w-auto lg:w-1/2">
+            <img
+              src="./assets/donationForChild.jpg"
+              alt="Donation For Children"
+            />
+          </figure>
+          <div class="card-body w-auto lg:w-1/2">
+            <span class="currency"
+              ><img class="" src="./assets/TakaCurrency.png" alt="Currency" />
+              <p>5000</p></span
+            >
+            <h2 class="card-title">Save the children in GAZA</h2>
+            <p>
+              Your donation today makes a difference. Save the Children has aid
+              waiting at the border and teams ready to deliver. Please give now
+              to help secure a brighter future for children in Gaza and around
+              the world. Crisis in Gaza: What to Know and How to Help
+            </p>
+            <div class="card-actions flex-col justify-center">
+              <input
+                type="number"
+                class="input validator w-full overflow-hidden focus:outline-2 focus:outline-[#0d99ff]"
+                required
+                placeholder="Minimum Donation 100 Taka"
+                min="100"
+                max="100000"
+                title="Must be between be 100 to 100000"
+              />
+              <button
+                class="btn btn-food-donate bg-[#0d99ff] text-[#f9f9f9] w-full"
+              >
+                Donate Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Single Donation Card -->
+        <div
+          class="card lg:card-side bg-base-100 shadow-lg mb-14 p-7 border-1 border-blue-500"
+        >
+          <figure class="w-auto lg:w-1/2">
+            <img
+              src="./assets/donationForTreatment.jpg"
+              alt="Save the people of GAZA"
+            />
+          </figure>
+          <div class="card-body w-auto lg:w-1/2">
+            <span class="currency"
+              ><img class="" src="./assets/TakaCurrency.png" alt="Currency" />
+              <p>5000</p></span
+            >
+            <h2 class="card-title">Save the people of GAZA</h2>
+            <p>
+              Your donation today makes a difference. Save the Children has aid
+              waiting at the border and teams ready to deliver. Please give now
+              to help secure a brighter future for children in Gaza and around
+              the world. Crisis in Gaza: What to Know and How to Help
+            </p>
+            <div class="card-actions flex-col justify-center">
+              <input
+                type="number"
+                class="input validator w-full overflow-hidden focus:outline-2 focus:outline-[#0d99ff]"
                 required
                 placeholder="Minimum Donation 100 Taka"
                 min="100"
@@ -82,8 +170,49 @@
       </div>
     </section>
     <!-- History Section -->
-    <section class="history-section"></section>
+    <section id="historySection" class="history-section">
+      <div class="history-card-container container">
+        <h2 class="text-xl font-bold mb-4">Donation History</h2>
+        <!-- Single Card  -->
+        <div class="card border border-1 border-blue-400 shadow-lg mb-5">
+          <div class="card-body">
+            <h2 class="card-title">Card Title</h2>
+            <p>
+              A card component has a figure, a body part, and inside body there
+              are title and actions parts
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="footer-section" class="footer">
+      <div class="container flex justify-between items-center p-5">
+        <div class="footer-logo flex flex-col justify-center items-center">
+          <a class="text-center" href="#"
+            ><img
+              class="w-14 h-14"
+              src="./assets/logo.png"
+              alt="Save the people of GAZA"
+          /></a>
+          <h3 class="text-xl font-bold text-[#f9f9f9]">
+            Save the people of GAZA
+          </h3>
+        </div>
+        <p class="text-xs font-bold text-[#f9f9f9]">
+          2025 &copy; All the right are reserved.
+        </p>
+        <div class="footer-link flex gap-3 text-sm font-bold text-[#f9f9f9]">
+          <a href="#">Privacy</a>
+          <a href="#">Contact Us</a>
+          <a href="#">About Us</a>
+        </div>
+      </div>
+    </footer>
     <!-- Custom Scripting src -->
+
+    <!-- Alert box cdn -->
+    <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
 
     <script src="./js/main.js"></script>
   </body>
