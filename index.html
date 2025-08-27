@@ -54,7 +54,7 @@
           <div class="card-body w-auto lg:w-1/2">
             <span class="currency"
               ><img class="" src="./assets/TakaCurrency.png" alt="Currency" />
-              <p>5000</p></span
+              <p id="donatedForFood">5000</p></span
             >
             <h2 class="card-title">Donate for Food In Gaza</h2>
             <p>
@@ -71,15 +71,17 @@
             </p>
             <div class="card-actions flex-col justify-center">
               <input
+                name="food"
                 type="number"
                 class="input validator w-full overflow-hidden focus:outline-2 focus:outline-[#0d99ff]"
                 required
                 placeholder="Minimum Donation 100 Taka"
                 min="100"
-                max="100000"
-                title="Must be between be 100 to 100000"
+                max="1000000000"
+                title="Must be between be 100 to 1000000000"
               />
               <button
+                id="foodDonate"
                 class="btn btn-food-donate bg-[#0d99ff] text-[#f9f9f9] w-full"
               >
                 Donate Now
@@ -111,6 +113,7 @@
             </p>
             <div class="card-actions flex-col justify-center">
               <input
+                name="children"
                 type="number"
                 class="input validator w-full overflow-hidden focus:outline-2 focus:outline-[#0d99ff]"
                 required
@@ -151,6 +154,7 @@
             </p>
             <div class="card-actions flex-col justify-center">
               <input
+                name="treatment"
                 type="number"
                 class="input validator w-full overflow-hidden focus:outline-2 focus:outline-[#0d99ff]"
                 required
@@ -215,5 +219,7 @@
     <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
 
     <script src="./js/main.js"></script>
+    <script src="./js/alert.js"></script>
+    <script src="./js/utilities.js"></script>
   </body>
 </html>
