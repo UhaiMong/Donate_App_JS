@@ -28,7 +28,7 @@
           >
           <span class="currency-icon"
             ><img src="./assets/TakaCurrency.png" alt="Currency" />
-            <p>5000</p></span
+            <p id="myBalance">5000</p></span
           >
         </nav>
       </header>
@@ -46,6 +46,7 @@
       <div class="donation-container container">
         <!-- Single donation card -->
         <div
+          id="foodDonationSection"
           class="card lg:card-side bg-base-100 shadow-lg mb-14 p-7 border-1 border-blue-500"
         >
           <figure class="w-auto lg:w-1/2">
@@ -70,25 +71,72 @@
               to the health issues.
             </p>
             <div class="card-actions flex-col justify-center">
-              <input
-                name="food"
-                type="number"
-                class="input validator w-full overflow-hidden focus:outline-2 focus:outline-[#0d99ff]"
-                required
-                placeholder="Minimum Donation 100 Taka"
-                min="100"
-                max="1000000000"
-                title="Must be between be 100 to 1000000000"
-              />
-              <button
+              <a
+                href="#donationForm"
                 id="foodDonate"
                 class="btn btn-food-donate bg-[#0d99ff] text-[#f9f9f9] w-full"
               >
                 Donate Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
+        <!-- Form for donation -->
+        <form class="hidden" id="donationForm" onsubmit="handleDonation(event)">
+          <h2 class="text-2xl">Please Fill fill up the form</h2>
+          <strong class="italic font-bold text-xs"
+            >** We do not share your information in publicly without your
+            permission.</strong
+          >
+          <div class="inputGroup mt-6">
+            <input
+              name="food"
+              type="number"
+              class="input validator w-full focus:outline-2 focus:outline-[#0d99ff]"
+              required
+              placeholder="Minimum Donation 100 Taka"
+              min="100"
+              max="1000000000"
+              title="Must be between be 100 to 1000000000"
+            />
+            <input
+              class="input w-full focus:outline-2 focus:outline-[#0d99ff]"
+              type="text"
+              id="donorName"
+              placeholder="Enter your name"
+              required
+            />
+            <input
+              class="input w-full focus:outline-2 focus:outline-[#0d99ff]"
+              type="text"
+              id="donorPhone"
+              placeholder="Enter Phone (optional)"
+            />
+
+            <input
+              class="input w-full focus:outline-2 focus:outline-[#0d99ff]"
+              type="email"
+              id="donorEmail"
+              placeholder="Enter your email"
+              required
+            /><br />
+            <textarea
+              rows="8"
+              class="input textarea w-full focus:outline-2 focus:outline-[#0d99ff] resize-none"
+              id="description"
+              placeholder="If you have any naration(optional)"
+            ></textarea>
+          </div>
+          <small
+            >We want to share about your donation in our Stories. Do you
+            agree?</small
+          >
+          <input type="checkbox" />Yes <input type="checkbox" />No
+          <button class="btn my-7 bg-[#0d99ff] text-white" type="submit">
+            Donate
+          </button>
+        </form>
+
         <!-- Single Donation Card -->
         <div
           class="card lg:card-side bg-base-100 shadow-lg mb-14 p-7 border-1 border-blue-500"
@@ -102,7 +150,7 @@
           <div class="card-body w-auto lg:w-1/2">
             <span class="currency"
               ><img class="" src="./assets/TakaCurrency.png" alt="Currency" />
-              <p>5000</p></span
+              <p id="donatedForChild">5000</p></span
             >
             <h2 class="card-title">Save the children in GAZA</h2>
             <p>
@@ -122,11 +170,13 @@
                 max="100000"
                 title="Must be between be 100 to 100000"
               />
-              <button
+              <a
+                href="#donationForm"
+                id="childDonate"
                 class="btn btn-food-donate bg-[#0d99ff] text-[#f9f9f9] w-full"
               >
                 Donate Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -143,7 +193,7 @@
           <div class="card-body w-auto lg:w-1/2">
             <span class="currency"
               ><img class="" src="./assets/TakaCurrency.png" alt="Currency" />
-              <p>5000</p></span
+              <p id="donatedForPeople">5000</p></span
             >
             <h2 class="card-title">Save the people of GAZA</h2>
             <p>
@@ -163,11 +213,13 @@
                 max="100000"
                 title="Must be between be 100 to 100000"
               />
-              <button
+              <a
+                href="#donationForm"
+                id="peopleDonate"
                 class="btn btn-food-donate bg-[#0d99ff] text-[#f9f9f9] w-full"
               >
                 Donate Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -175,7 +227,7 @@
     </section>
     <!-- History Section -->
     <section id="historySection" class="history-section">
-      <div class="history-card-container container">
+      <div id="historyCard" class="history-card-container container">
         <h2 class="text-xl font-bold mb-4">Donation History</h2>
         <!-- Single Card  -->
         <div class="card border border-1 border-blue-400 shadow-lg mb-5">

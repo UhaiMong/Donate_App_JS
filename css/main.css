@@ -63,7 +63,12 @@ nav {
   display: inline;
   font-weight: bold;
 }
-
+.inputGroup {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 12px;
+}
 .donation-btn-top {
   margin-top: 50px;
   margin-bottom: 30px;
